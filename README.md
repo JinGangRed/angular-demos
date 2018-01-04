@@ -3,7 +3,7 @@
 该项目是基于angular2.0 以上版本,收纳学习和工作中学习和使用的angular组件等,便于以后开发使用。旨在建立一个angular的工具箱或百科书。
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.7.
 
-##项目结构说明
+## 项目结构说明
 app 是项目的主目录
   app-assets 存放项目的核心模块和共享模块
     page-not-found 请求的页面没找到时，显示内容页面

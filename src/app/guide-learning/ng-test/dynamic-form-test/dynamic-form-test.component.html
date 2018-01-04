@@ -1,0 +1,7 @@
+<p>
+  dynamic-form-test works!
+</p>
+<div [formGroup]="form">
+  <app-dynamic-form [formconfig]="formConfig" formArrayName="dynamic"></app-dynamic-form>
+  <button (click)="getFormArray()">登录</button>
+</div>

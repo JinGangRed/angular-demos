@@ -1,0 +1,16 @@
+.title{
+  background-color: #f0f0f0;
+  /*height: 10%;*/
+}
+.title_icon{
+  width: 7%;
+  display:inline-block;
+  /*border: blue 1px solid;*/
+}
+.title_head{
+  width: 91%;
+  text-align: center;
+  display:inline-block;
+  font-size: 2rem;
+  /*border: blue 1px solid;*/
+}

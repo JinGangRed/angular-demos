@@ -1,0 +1,5 @@
+<form [formGroup]="formArray">
+  <div *ngFor="let field of formArray.controls ; let i = index" [formGroupName]="i">
+    <input type="text" formControlName="field.name">
+  </div>
+</form>

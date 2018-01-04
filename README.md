@@ -1,5 +1,6 @@
-# Demos
+# Angular Demos
 
+该项目是基于angular2.0 以上版本,收纳学习和工作中学习和使用的angular组件等,便于以后开发使用。旨在建立一个angular的工具箱或百科书。
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.7.
 
 ## Development server

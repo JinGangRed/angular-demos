@@ -4,10 +4,10 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.7.
 
 ## 项目结构说明
-app 是项目的主目录
-  app-assets 存放项目的核心模块和共享模块
-    page-not-found 请求的页面没找到时，显示内容页面
-    welcome 欢迎页
+* app 是项目的主目录
+  * app-assets 存放项目的核心模块和共享模块
+    * page-not-found 请求的页面没找到时，显示内容页面
+    * welcome 欢迎页
   guide-learning 存放在[angular官网](https://angular.io/)、[angular中文官网](https://angular.cn/) 学习所做的案例
   
 

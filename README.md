@@ -14,9 +14,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     * template 模板文件
   * ngx-bootstrap-learning [ngx-bootstrap](https://valor-software.com/ngx-bootstrap/)的学习使用
 
-
 ## 涉及的知识点
-  * 懒加载路由可参见app-routing.module.ts
+  * 懒加载路由,可参见app-routing.module.ts
   * ngx-bootstrap
  
 ## 个人信息

@@ -1,0 +1,12 @@
+<p>
+  alert组件可用于<strong>错误信息提示</strong>,通过dismissOnTimeout设置<strong>提示关闭时间</strong>
+</p>
+<alert type="success">
+这是一个成功的提示！
+</alert>
+<div *ngFor="let alert of alerts">
+  <alert [type]="alert.type" [dismissOnTimeout]="alert.timeout">
+    {{alert.msg}}
+  </alert>
+</div>
+<button type="button" class="btn btn-primary" (click)="addAlert()">添加提示</button>

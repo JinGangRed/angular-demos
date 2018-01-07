@@ -13,6 +13,10 @@ const app_routes: Routes =  [
     loadChildren: './ngx-bootstrap-learning/bootstrap-learning.module#BootstrapLearningModule',
   },
   {
+    path: 'bootstrap-practise',
+    loadChildren: './ngx-bootstrap-practise/bootstrap-practise.module#BootstrapPractiseModule',
+  },
+  {
     path: '',
     component: WelcomeComponent
   },

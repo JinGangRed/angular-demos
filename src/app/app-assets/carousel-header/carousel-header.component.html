@@ -1,0 +1,8 @@
+<div class="row carousel_content">
+  <carousel [interval]="interVal" [noWrap]="noWrapSlides" [activeSlide]="activesSlideIndex">
+    <slide *ngFor="let slide of slides" class="carousel_slides">
+      <img [src]="slide.image" alt="image slide" class="carousel_img">
+    </slide>
+  </carousel>
+</div>
+

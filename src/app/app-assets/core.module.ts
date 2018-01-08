@@ -4,13 +4,15 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {ShareModule} from './share.module';
 import {CarouselHeaderComponent} from './carousel-header/carousel-header.component';
 import {BrowserModule} from '@angular/platform-browser';
-import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
+import {HttpModule} from '@angular/http';
 import {AuthService} from '../services/auth.service';
 
 @NgModule({
   imports: [
     ShareModule,
     BrowserModule,
+    HttpModule,
     HttpClientModule
   ],
   exports: [
@@ -24,7 +26,7 @@ import {AuthService} from '../services/auth.service';
     PageNotFoundComponent,
   ],
   providers: [
-    AuthService
+    AuthService,
   ]
 
 })

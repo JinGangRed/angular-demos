@@ -11,14 +11,20 @@
   background-color: #f0f0f0;
 }
 .content_body{
-  height: 86%;
+  height: 83%;
   margin-right: 0px;
-  background-color: #fffae3;
+  margin-left: 0px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #fff;
 }
 .content_foot{
+  margin-top: 10px;
   height: 6%;
   margin-right: 0px;
-  background-color: #0784de;
+  margin-left: 0px;
+  border-radius: 5px;
+  background-color: #fff;
 }
 
 .content_head img{
@@ -38,10 +44,8 @@
 }
 
 .foot_info{
-  /*text-align: center;*/
   font-size: 1.5rem;
   text-align: center;
-  /*margin: 0 auto 0 -10%;*/
   line-height: 3.6rem;
 }
 

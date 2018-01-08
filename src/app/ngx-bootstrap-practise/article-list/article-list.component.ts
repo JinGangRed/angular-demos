@@ -1,20 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import {BaseService} from '../../services/base.service';
-// import {Browser} from "selenium-webdriver";
+import {AuthService} from '../../services/auth.service';
 @Component({
   selector: 'app-article-list',
   templateUrl: './article-list.component.html',
   styleUrls: ['./article-list.component.css'],
-  providers: [BaseService]
 })
 export class ArticleListComponent implements OnInit {
   isMobile = navigator.userAgent.match(/AppleWebKit.*Mobile.*/);
-  constructor(private baseService: BaseService) { }
+  constructor(private auth: AuthService) { }
 
   ngOnInit() {
     console.log(navigator.userAgent);
     console.log(this.isMobile);
-    this.baseService.getBaiDu();
+    this.auth.getAccesstoken('gang.a@capgemini.com');
   }
 
 }

@@ -1,5 +1,5 @@
 
-import {Injectable} from '@angular/core';
+import {Injectable, Injector} from '@angular/core';
 import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/do';
@@ -10,7 +10,6 @@ import {AuthService} from './auth.service';
  */
 @Injectable()
 export class BaseHttpInterceptor implements HttpInterceptor {
-
   constructor(private auth: AuthService) {
     console.log('BaseHttpInterceptor had Injected');
   }
@@ -18,7 +17,7 @@ export class BaseHttpInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     console.log('拦截器起作用了');
     const started = Date.now();
-    const accesstoken = `Bearer ${this.auth.getAccesstoken()}`;
+    const accesstoken = `Bearer ${this.auth.getLocalAccesstoken()}`;
     const authReq = req.clone({
       setHeaders: {
         Authorization: accesstoken

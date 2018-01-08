@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {forwardRef, NgModule} from '@angular/core';
 
 import { AppComponent } from './app.component';
 
@@ -23,7 +23,7 @@ import {BaseHttpInterceptor} from './services/base-http-interceptor';
       provide: HTTP_INTERCEPTORS,
       useClass: BaseHttpInterceptor,
       multi: true
-    }
+    },
   ],
   bootstrap: [AppComponent]
 })

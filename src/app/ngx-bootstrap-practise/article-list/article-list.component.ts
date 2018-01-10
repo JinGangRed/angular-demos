@@ -12,7 +12,6 @@ export class ArticleListComponent implements OnInit {
   ngOnInit() {
     console.log(navigator.userAgent);
     console.log(this.isMobile);
-    this.auth.getAccesstoken('gang.a@capgemini.com');
   }
 
 }

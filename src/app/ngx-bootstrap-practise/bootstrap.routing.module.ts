@@ -6,6 +6,10 @@ const ngx_route: Routes = [
   {
     path: 'article-list',
     component: ArticleListComponent,
+  },
+  {
+    path: 'users',
+    loadChildren: './users/user.module#UserModule'
   }
 ];
 

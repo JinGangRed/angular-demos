@@ -11,6 +11,6 @@ export class AppComponent implements OnInit {
   constructor(private auth: AuthService) {
   }
   ngOnInit() {
-    this.auth.getAccesstoken('gang.a.jin@capgemini.com');
+    // this.auth.getLocalAccesstoken();
   }
 }

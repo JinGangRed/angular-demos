@@ -2,12 +2,7 @@ import { NgModule } from '@angular/core';
 import {BootstrapRoutingModule} from './bootstrap.routing.module';
 import {ShareModule} from '../app-assets/share.module';
 
-
-
-
-
 import {ArticleListComponent} from './article-list/article-list.component';
-import {CarouselHeaderComponent} from '../app-assets/carousel-header/carousel-header.component';
 
 @NgModule({
   imports: [
@@ -15,7 +10,7 @@ import {CarouselHeaderComponent} from '../app-assets/carousel-header/carousel-he
     BootstrapRoutingModule,
   ],
   declarations: [
-    ArticleListComponent,
-  ]
+    ArticleListComponent
+  ],
 })
 export class BootstrapPractiseModule { }

@@ -1,0 +1,44 @@
+.formGroup{
+  margin-top: 2px;
+  /*text-align: center;*/
+  overflow-y: scroll;
+  width: 100%;
+  height: 90%;
+}
+.formSubmit{
+  margin-top: 2px;
+  /*text-align: center;*/
+  /*overflow-y: scroll;*/
+  width: 100%;
+  height: 10%;
+}
+.btn{
+  width: 100%;
+
+}
+.btn.disabled, .btn[disabled]{
+  border-color: white;
+  background-color: #c3d6e8;
+}
+.info{
+  text-align: left;
+  /*margin-top: 10px;*/
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.input-control{
+  /*width: 80%;*/
+  background-color: #dee9f1;
+}
+.label_info{
+  width: 100%;
+  height: 20px;
+  background-color: rgba(237, 237, 237, 1);
+}
+.alert{
+  font-size: 1rem;
+  padding: 0px;
+  margin-bottom: 0px;
+  /*float: left;*/
+}

@@ -1,0 +1,27 @@
+.table-responsive{
+  text-align: center;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  border-radius: 5px;
+}
+.table-responsive>.table-bordered{
+  border: #bdbdbd 1px solid;
+}
+.label-info{
+  background-color: #ededed;
+  border-radius: 5px;
+}
+.pagination{
+  margin:0 0 0 0;
+  display: inline;
+  float: right;
+}
+.sort{
+  margin-top: 10px;
+  font-size: 1rem;
+}
+.btn{
+  padding: 1px 2px;
+}
+
+

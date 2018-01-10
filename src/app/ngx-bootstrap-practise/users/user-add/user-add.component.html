@@ -1,0 +1,96 @@
+<div class="formGroup" [formGroup]="userInfoForm">
+  <div class="label_info col-xs-12 col-md-8 col-sm-12">登录信息</div>
+  <div class="col-xs-12 col-md-8 col-sm-12 info">
+    <label>昵称: <i style="color: red">*</i></label>
+    <input type="text" class="form-control input-control"
+           [formControl]="nickname" placeholder="请输入昵称">
+    <div *ngIf="nickname.invalid && (nickname.dirty || nickname.touched)"
+         class="alert alert-danger col-md-6 col-sm-6 col-xs-6">
+      <div *ngIf="nickname.errors['required']">
+        请输入昵称
+      </div>
+      <div *ngIf="nickname.errors['minlength']">
+        昵称长度应为2~15个字符
+      </div>
+      <div *ngIf="nickname.errors['maxlength']">
+        昵称长度应为2~15个字符
+      </div>
+    </div>
+    <!--<hr />-->
+  </div>
+  <div class="col-xs-12 col-md-8 col-sm-12 info">
+    <label>邮箱:<i style="color: red">*</i></label>
+    <input type="email" class="form-control input-control" [formControl]="email" placeholder="请输入邮箱">
+    <div *ngIf="email.invalid && (email.dirty)"
+         class="alert alert-danger col-md-6 col-sm-6 col-xs-6">
+      <div *ngIf="email.errors['email']">
+        请输入合法的email地址
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-8 col-sm-12 info">
+    <label>密码:<i style="color: red">*</i></label>
+    <input type="password" class="form-control input-control" [formControl]="password" placeholder="请输入密码">
+    <div *ngIf="password.invalid && (password.dirty || password.touched)"
+         class="alert alert-danger col-md-6 col-sm-6 col-xs-6">
+      <!--{{password.errors | json}}-->
+      <div *ngIf="password.errors['required']">
+        请输入密码
+      </div>
+      <div *ngIf="password.errors['minlength']">
+        密码长度应为2~15个字符
+      </div>
+      <div *ngIf="password.errors['maxlength']">
+        密码长度应为2~15个字符
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-8 col-sm-12 info">
+    <label>确认密码:<i style="color: red">*</i></label>
+    <input type="password" class="form-control input-control" [formControl]="repassword"
+           placeholder="请再次输入密码">
+    <div *ngIf="repassword.invalid && (repassword.dirty || repassword.touched)"
+         class="alert alert-danger col-md-6 col-sm-6 col-xs-6">
+      <!--{{repassword.errors | json}}-->
+      <div *ngIf="repassword.errors['required']">
+        请输入密码
+      </div>
+      <div *ngIf="repassword.errors['minlength']">
+        密码长度应为2~15个字符
+      </div>
+      <div *ngIf="repassword.errors['maxlength']">
+        密码长度应为2~15个字符
+      </div>
+    </div>
+    <!--<div *ngIf="!pwdEQrePwd" class="alert alert-danger col-md-6 col-sm-6 col-xs-6">-->
+    <!--两次密码不一致-->
+    <!--</div>-->
+  </div>
+
+  <div class="label_info col-xs-12 col-md-8 col-sm-12">个人信息</div>
+  <div class="col-xs-12 col-md-8 col-sm-12 info">
+    <label>姓名: </label>
+    <input type="text" class="form-control input-control"
+           [formControl]="name" placeholder="请输入姓名">
+  </div>
+  <div class="col-xs-12 col-md-8 col-sm-12 info">
+    <label>地址: </label>
+    <input type="text" class="form-control input-control"
+           [formControl]="address" placeholder="请输入地址">
+  </div>
+  <div class="col-xs-12 col-md-8 col-sm-12 info">
+    <label>手机号码: </label>
+    <input type="text" class="form-control input-control"
+           [formControl]="phoneNumber" placeholder="请输入手机号">
+  </div>
+
+
+  <p>{{userInfoForm.value | json}}</p>
+</div>
+<div class="formSubmit col-sm-12 col-md-8 col-xs-12">
+  <button class="btn btn-primary" type="button"
+          [disabled]="(!userInfoForm.valid)"
+          (click)="summitForm()">
+    注 册
+  </button>
+</div>

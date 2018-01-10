@@ -1,0 +1,47 @@
+<div class="table-responsive">
+  <nav>
+    <button class="btn btn-primary" (click)="goto('/bootstrap-practise/users/add')">添加</button>
+  </nav>
+  <table class="table table-bordered table-hover table-striped">
+    <thead>
+    <tr class="label-info">
+      <td colspan="5">用户信息列表</td>
+    </tr>
+    <tr>
+      <td>编号</td>
+      <td>昵称</td>
+      <td>邮箱</td>
+      <td>权限</td>
+      <td *ngIf="!isMobile">操作</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users;let i = index">
+      <td>{{i + 1}}</td>
+      <td>{{user.nickname}}</td>
+      <td>{{user.email}}</td>
+      <td *ngIf="user.role === 'user'">
+        普通
+      </td>
+      <td *ngIf="!isMobile">
+        <button class="btn btn-primary">删除</button>
+        <button class="btn btn-primary">修改</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="col-xs-12 col-md-12 col-sm-12 sort">
+    <pagination class="pagination"
+                [(totalItems)]="totalItems"
+                [boundaryLinks]="true"
+                previousText="上页"
+                [maxSize]="3"
+                [rotate]="false"
+                nextText="下页"
+                [(itemsPerPage)]="itemPerPage"
+                [(ngModel)]="currentPage"
+                (pageChanged)="pageChanged($event)"
+                firstText="首页"
+                lastText="尾页"></pagination>
+  </div>
+</div>

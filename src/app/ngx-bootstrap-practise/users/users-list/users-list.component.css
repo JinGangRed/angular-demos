@@ -20,8 +20,23 @@
   margin-top: 10px;
   font-size: 1rem;
 }
-.btn{
-  padding: 1px 2px;
-}
 
+.btn_option{
+  padding-right: 10px;
+}
+.modal_danger_header{
+  background-color: #e64340;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+}
+.modal-body {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+.modal-footer{
+  text-align: center;
+}
 

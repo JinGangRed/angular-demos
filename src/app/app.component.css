@@ -15,17 +15,18 @@
 .content_head{
   height: 8%;
   border-radius: 5px;
+  min-height: 5rem;
   background-color: #337ab7;
 }
 .content_body{
-  height: 81%;
+  height: 80%;
   border-radius: 5px;
   overflow: hidden;
   background-color: #fff;
 }
 .content_foot{
   margin-top: 10px;
-  height: 9%;
+  height: 10%;
   border-radius: 5px;
   text-align: center;
   background-color: #c3d6e8;
@@ -39,12 +40,17 @@
 }
 .head_div{
   height: 100%;
+  text-align: center;
+}
+.head_logo{
+  border-right: #f2f2f2 1px solid;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 .head_title{
-  font-size: 1.9rem;
-  text-align: center;
-  margin: 0 auto 0 -10%;
-  line-height: 5.7rem;
+  font-size: 2rem;
+  margin: 0 auto 0 auto;
+  line-height: 5rem;
 }
 
 .foot_info{

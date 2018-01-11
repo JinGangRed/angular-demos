@@ -62,9 +62,6 @@
         密码长度应为2~15个字符
       </div>
     </div>
-    <!--<div *ngIf="!pwdEQrePwd" class="alert alert-danger col-md-6 col-sm-6 col-xs-6">-->
-    <!--两次密码不一致-->
-    <!--</div>-->
   </div>
 
   <div class="label_info col-xs-12 col-md-8 col-sm-12">个人信息</div>
@@ -83,14 +80,9 @@
     <input type="text" class="form-control input-control"
            [formControl]="phoneNumber" placeholder="请输入手机号">
   </div>
-
-
   <p>{{userInfoForm.value | json}}</p>
 </div>
 <div class="formSubmit col-sm-12 col-md-8 col-xs-12">
-  <button class="btn btn-primary" type="button"
-          [disabled]="(!userInfoForm.valid)"
-          (click)="summitForm()">
-    注 册
-  </button>
+  <button class="btn btn-primary" type="button" [disabled]="!userInfoForm.valid"
+          (click)="submitForm()">注册</button>
 </div>

@@ -1,7 +1,8 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, OnInit, TemplateRef, ViewEncapsulation} from '@angular/core';
 import {UsersService} from '../../../services/users/users.service';
 import {UserModel} from '../../../models/UserModel';
 import {Router} from '@angular/router';
+import {BsModalRef, BsModalService} from 'ngx-bootstrap';
 
 @Component({
   encapsulation: ViewEncapsulation.None,
@@ -15,8 +16,11 @@ export class UsersListComponent implements OnInit {
   itemPerPage = 8;
   totalItems = 0;
   currentPage = 1;
+  modalRef: BsModalRef; // 模态框
   isMobile = navigator.userAgent.match(/AppleWebKit.*Mobile.*/);
+  deleteId: string;
   constructor(private userService: UsersService,
+              private modalService: BsModalService,
               private router: Router) {
   }
 
@@ -37,7 +41,16 @@ export class UsersListComponent implements OnInit {
       console.log(this.totalItems);
     });
   }
+  deleteUser(id: string) {
+    console.log('待删除的用户ID:' + this.deleteId);
+    this.userService.deleteUser(id);
+    this.modalRef.hide();
+  }
   goto(toUrl: string) {
     this.router.navigate([toUrl]);
+  }
+  openModal(template: TemplateRef<any>, deleteId: string) {
+    this.deleteId = deleteId;
+    this.modalRef = this.modalService.show(template);
   }
 }

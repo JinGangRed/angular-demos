@@ -7,7 +7,7 @@ import {AuthService} from './services/auth.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  title = 'Angular Learning Note';
+  title = 'Angular Cook book';
   constructor(private auth: AuthService) {
   }
   ngOnInit() {
